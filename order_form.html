@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/order_form_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/e586727d0a.js" crossorigin="anonymous"></script>
+    <title>Task 1.5</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__content">
+                <div class="logo">
+                    <img class="logo__image" src="./images/bike_logo.png" alt="company logo">
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <nav class="nav_bar">
+                <ul class="nav_bar__elements">
+                    <li>
+                        <a class="nav_bar__link" href="task_1_5.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="contacts.html">Contact</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="registration.html">Registrate</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="order_form.html">Order</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="customer_page.html">Customer Page</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main__content">
+                <div class="order">
+                    <h1>Order</h1>
+                    <form name="form" class="form" action="result.html">
+                        <div class="bike_choose_block">
+                            <label   class="label" for="bike_select">Bike:
+                                <select name="bike" id="bike_select">
+                                    <option disabled selected="selected">Select Bike</option>
+                                    <option value="giant">Giant</option>
+                                    <option value="comanche">Comanche</option>
+                                    <option value="rainbow">Rainbow</option>
+                                </select>
+                            </label>
+                            <label  class="error" id="bike_error" for="bike_select"></label>
+                            <br>
+                            <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Preferences.."></textarea>
+                        </div>
+                        <div class="date_block">
+                            <h3>Delivery Date</h3>
+                            <select name="year" id="year">
+                                <option value="Year" disabled selected="selected">Year</option>
+                            </select>
+                            
+                            <select name="month" id="month">
+                                <option value="" disabled selected="selected">Month</option>
+                                
+                            </select>
+                            <select name="day" id="day">
+                                <option value="" disabled selected="selected">Day</option>
+                            </select>
+                            <label  class="error" id="date_error" for="year"></label>
+                        </div>
+                        <div class="billing_address_block">
+                            <h3>Billing Address</h3>
+                            <label class="label" for="first_name">First Name:
+                                <input type="text" id="first_name" placeholder="Ivan">
+                            <br>
+                            </label>
+                            <label class="name_label" for="last_name">Last Name:
+                                <input type="text" id="last_name"placeholder="Ivanov">
+                            </label>
+                            <label class="label" for="region">State/Region:
+                                <select name="country" id="region"> 
+                                    <option value="" disabled selected="selected">Choose region</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="Russia">Russia</option>
+                                </select>
+                            </label>
+                            <label  class="label" for="street">Street:
+                                <input type="text" id="street" placeholder="Street address, city">
+                            </label>
+                            <label  class="label" for="zip">ZIP:
+                                <input type="tel" id="zip" placeholder="00000">
+                            </label>
+                            <label  class="label" for="phone">Phone:
+                                <input type="tel" id="phone"placeholder="0112223344">
+                            </label>
+                        </div>
+                        <div class="delivery_address_block">
+                            <h3>Delivery Address</h3>
+                            <label class="label_checkbox" for="checkbox">Same as Billing Address</label>
+                                <input type="checkbox" id="checkbox">
+                            <label class="label" for="first_name_delivery">First Name:
+                                <input type="text" id="first_name_delivery" placeholder="Ivan">
+                            <br>
+                            </label>
+                            <label class="name_label" for="last_name_delivery">Last Name:
+                                <input type="text" id="last_name_delivery"placeholder="Ivanov">
+                            </label>
+                            <label class="label" for="region_delivery">State/Region:
+                                <select name="country" id="region_delivery"> 
+                                    <option value="" disabled selected="selected">Choose region</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                    <option value="Russia">Russia</option>
+                                </select>
+                            </label>
+                            <label  class="label" for="street_delivery">Street:
+                                <input type="text" id="street_delivery" placeholder="Street address, city">
+                            </label>
+                            <label  class="label" for="zip_delivery">ZIP:
+                                <input type="tel" id="zip_delivery" placeholder="00000">
+                            </label>
+                            <label  class="label" for="phone_delivery">Phone:
+                                <input type="tel" id="phone_delivery"placeholder="0112223344">
+                            </label>
+                        </div>
+                        <div class="payment_block">
+                            <h3>Payment</h3>
+                            <label for="visa">Visa</label>
+                                <input type="radio" name="card" id="visa" value="Visa" checked>
+                            <label for="mastercard">MasterCard </label>
+                                <input type="radio" name="card" id="mastercard" value ="MasterCard">
+                            
+                            <div class="card">
+                                <label class="label" for="card_number">Card number:
+                                <input type="tel" id="card_number" maxlength="16" placeholder="1111222233334444">
+                                </label>
+                                <span  class="error" id="card_error" for="card_number"></span>
+                                <br>
+                                <label class="label cvv_label" for="cvv">CVV
+                                <input type="password" name="cvv" id="cvv" maxlength="3">
+                                <span  class="error" id="cvv_error" for="cvv"></span>
+                                </label>
+                                <label for="month_card">
+                                <input type="tel" name="month" id="month_card" maxlength="2" placeholder="MM">
+                                <span class="slash">/</span>
+                                <input type="tel" name="year" id="year_card" maxlength="2" placeholder="YY">
+                                <span  class="error" id="card_date_error" for="cvv"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="create_account_block">
+                            <h3>Create Account?</h3>
+                            <label for="name" class="label">Username:
+                                <input id="user_name"  class="name" required>
+                            </label>
+                            <span  class="error" id="user_name_error" for="user_name"></span>
+                            <label for="password" class="label">Password:
+                            <input type="password" id="user_pass" class="password">
+                            </label>
+                            <span  class="error" id="user_pass_error" for="user_pass"></span>
+                            <label for="password" class="label">Confirm password:
+                            <input type="password" id="user_pass_confirm" class="password_repeat">
+                            </label>
+                            <span  class="error" id="user_pass_confirm_error" for="user_pass_confirm"></span>
+                        </div>
+                        <button type="button" id="confirm_button" name="button">Confirm order</button>
+                    </form>   
+                </div>
+            </div>
+            <aside class="right_bar">
+                <div class="search_form">
+                    <label for="tags"> <b>Brand you alooking for:</b></label>
+                    <br>
+                    <input id="tags">
+                </div>
+                <div class="inline_calendar">
+                    <b>Choose your Date:</b> <div id="datepicker"></div>
+                </div>
+            </aside>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <span class="year">2020</span>
+                <span class="copyright">Copyright</span>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" 
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="js/task_2_2.js"></script>
+    <script src="js/task_3_2.js"></script>
+</body>
+</html>

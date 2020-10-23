@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/task_1_5_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/cupertino/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/e586727d0a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Task 1.5</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__content">
+                <div class="logo">
+                    <img class="logo__image" src="./images/bike_logo.png" alt="company logo">
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <nav class="nav_bar">
+                <ul class="nav_bar__elements">
+                    <li>
+                        <a class="nav_bar__link" href="task_1_5.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="contacts.html">Contact</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="about.html">About us</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="registration.html">Registration</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="order_form.html">Order</a>
+                    </li>
+                    <li>
+                        <a class="nav_bar__link" href="customer_page.html">Customer Page</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main__content">
+                <div class="carousel_container">
+                    <div class="carousel">
+                        <img src="images/arrow-left.jpg" class="prev" alt="prev">
+                        <div class="carousel_content">
+                            <img src="images/mount.jpg" class="active img" alt="">
+                            <img src="images/road.jpg" class="img" alt="">
+                            <img src="images/kid_bike.jpg" class="img" alt="">
+                        </div>
+                        <img src="images/arrow-right.jpg" class="next" alt="next">
+                    </div>
+                </div>
+                <div class="product_list">
+                    <div id="top_product" class="product_list__item top_product">
+                        <div class="content_top_product">
+                            <div class="content_top_product__type_and_image">
+                                <div class="type">
+                                    <p class="type_text">
+                                        <i class="fas fa-mountain"></i>
+                                    </p>
+                                </div>
+                                <div class="brand">
+                                    <a href="#">Giant</a>
+                                </div>
+                                <div class="top_product_image">
+                                    <img class="image" src="./images/bike_1.jpg" alt="mountain bike">
+
+                                </div>
+                            </div>
+                            <div class="content_top_product__price_and_text">
+                                <div class="top_product_price">
+                                    <p><b>Price:</b></p>
+                                    <span class="price_now">$100</span>
+                                    <span class="price_before">$150</span>
+                                </div>
+                                <div class="top_product_text">
+                                    <p class="text">
+                                        Bicycle <span class="bike_name">Giant Talon 3</span> 27.5 "2019 - 
+                                        Excellent and reliable bike 
+                                        from the global brand Giant.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content_top_product__tech_info_advantages">
+                                <div class="top_product_tech_info">
+                                    <span>Wheel diameter</span>
+                                    <span>25</span>
+                                    <span>Number of speeds</span>
+                                    <span>18</span>
+                                    <a href="" class="more_details">More Details..</a>
+                                </div>
+                                <div class="advantages">
+                                    <span class="free_shipping">Free Shipping</span>
+                                    <span class="new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_list__item second_product">
+                        <div class="content_item">
+                            <div class="content_item__type_and_image">
+                                <div class="type">
+                                    <p class="type_text">
+                                        <i class="fas fa-road"></i>
+                                    </p>
+                                </div>
+                                <div class="brand">
+                                    <p>Comanche</p>
+                                </div>
+                                <div class="item_image">
+                                    <img class="image" src="./images/bike_2.jpg" alt="road bike">
+                                </div>
+                            </div>
+                            <div class="content_item__price_and_text">
+                                <div class="item_price">
+                                    <span class="price_now">$75</span>
+                                    <span class="price_before">$110</span>
+                                </div>
+                                <div class="item_text">
+                                    <p class="text">
+                                        Bicycle <span class="bike_name">Giant Talon 3</span> 27.5 "2019 - 
+                                        Excellent and reliable bike 
+                                        from the global brand Giant.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content_item__details_and_advantages">
+                                <div class="item_tech_info">
+                                    <a href="" class="more_details">More Details..</a>
+                                </div>
+                                <div class="advantages">
+                                    <span class="free_shipping">Free Shipping</span>
+                                    <span class="new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_list__item third_product">
+                        <div class="content_item">
+                            <div class="content_item__type_and_image">
+                                <div class="type">
+                                    <p class="type_text">
+                                        <i class="fas fa-child"></i>
+                                    </p>
+                                </div>
+                                <div class="brand">
+                                    <p>Rainbow</p>
+                                </div>
+                                <div class="item_image">
+                                    <img class="image" src="./images/bike_3.jpg" alt="road bike">
+                                </div>
+                            </div>
+                            <div class="content_item__price_and_text">
+                                <div class="item_price">
+                                    <span class="price_now">$50</span>
+                                    <span class="price_before">$110</span>
+                                </div>
+                                <div class="item_text">
+                                    <p class="text">
+                                        Bicycle <span class="bike_name">Giant Talon 3</span> 27.5 "2019 - 
+                                        Excellent and reliable bike 
+                                        from the global brand Giant.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content_item__details_and_advantages">
+                                <div class="item_tech_info">
+                                    <a href="" class="more_details">More Details..</a>
+                                </div>
+                                <div class="advantages">
+                                    <span class="free_shipping">Free Shipping</span>
+                                    <span class="new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_list__item fourth_product">
+                        <div class="content_item">
+                            <div class="content_item__type_and_image">
+                                <div class="type">
+                                    <p class="type_text">
+                                        <i class="fas fa-road"></i>
+                                    </p>
+                                </div>
+                                <div class="brand">
+                                    <p>Comanche</p>
+                                </div>
+                                <div class="item_image">
+                                    <img class="image" src="./images/bike_2.jpg" alt="road bike">
+                                </div>
+                            </div>
+                            <div class="content_item__price_and_text">
+                                <div class="item_price">
+                                    <span class="price_now">$75</span>
+                                    <span class="price_before">$110</span>
+                                </div>
+                                <div class="item_text">
+                                    <p class="text">
+                                        Bicycle <span class="bike_name">Giant Talon 3</span> 27.5 "2019 - 
+                                        Excellent and reliable bike 
+                                        from the global brand Giant.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content_item__details_and_advantages">
+                                <div class="item_tech_info">
+                                    <a href="" class="more_details">More Details..</a>
+                                </div>
+                                <div class="advantages">
+                                    <span class="free_shipping">Free Shipping</span>
+                                    <span class="new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_list__item fifth_product">
+                        <div class="content_item">
+                            <div class="content_item__type_and_image">
+                                <div class="type">
+                                    <p class="type_text">
+                                        <i class="fas fa-child"></i>
+                                    </p>
+                                </div>
+                                <div class="brand">
+                                    <p>Rainbow</p>
+                                </div>
+                                <div class="item_image">
+                                    <img class="image" src="./images/bike_3.jpg" alt="road bike">
+                                </div>
+                            </div>
+                            <div class="content_item__price_and_text">
+                                <div class="item_price">
+                                    <span class="price_now">$50</span>
+                                    <span class="price_before">$110</span>
+                                </div>
+                                <div class="item_text">
+                                    <p class="text">
+                                        Bicycle <span class="bike_name">Giant Talon 3</span> 27.5 "2019 - 
+                                        Excellent and reliable bike 
+                                        from the global brand Giant.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content_item__details_and_advantages">
+                                <div class="item_tech_info">
+                                    <a href="" class="more_details">More Details..</a>
+                                </div>
+                                <div class="advantages">
+                                    <span class="free_shipping">Free Shipping</span>
+                                    <span class="new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <aside class="right_bar">
+                <div class="search_form">
+                    <label for="tags"><b>Brand you are looking for:</b></label>
+                    <br>
+                    <input id="tags">
+                </div>
+                <div class="inline_calendar">
+                    <b>Choose your Date:</b> <div id="datepicker"></div>
+                </div>
+            </aside>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <span class="year">2020</span>
+                <span class="copyright">Copyright</span>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" 
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="js/task_2_2.js"></script>
+
+</body>
+</html>

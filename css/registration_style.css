@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  font-family: roboto;
+  height: 100%;
+  display: grid;
+  grid-template: minmax(50px, auto) 1fr minmax(20px, auto)/1fr;
+  grid-template-areas: "header" "main" "footer";
+  min-height: 100vh;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  background-color: #add1ed;
+  border-bottom: 3px solid black;
+  width: 100%;
+  grid-area: header;
+}
+.header__content {
+  text-align: center;
+}
+.header__content .logo__image {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #add1ed 0%, #D4D4D4 100%);
+}
+.main__content {
+  flex: 1;
+}
+.main__content .registration {
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  background-color: #add1ed;
+  margin-top: 150px;
+  width: 100%;
+  align-items: center;
+  border-radius: 10px;
+}
+.main__content .registration h1 {
+  text-align: center;
+}
+.main__content .registration .registration_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+}
+.main__content .registration .registration_form .text_form {
+  margin: 10px 5px 5px 5px;
+}
+.main__content .registration .registration_form .label {
+  padding-right: 5px;
+}
+.main__content .registration .registration_form .password {
+  margin-left: 52px;
+}
+.main__content .registration .registration_form .name, .main__content .registration .registration_form .email {
+  margin-left: 48px;
+}
+.main__content .registration .registration_form .button_send {
+  text-align: center;
+}
+.main__content .registration .registration_form .button_send .button {
+  font-size: 15px;
+  padding: 1px 1px 1px 1px;
+  width: 50px;
+  height: 25px;
+}
+.main__content .registration .registration_form .fb-login-button {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 25%;
+}
+.main__content .registration .registration_form #login_confirm {
+  text-align: center;
+  color: #2c9c2c;
+  display: none;
+}
+.main__content .registration .registration_form #login_error {
+  text-align: center;
+  color: red;
+  display: none;
+}
+.main__content .registration .registration_form .sign_in {
+  margin-top: 10px;
+  text-align: center;
+}
+.main .nav_bar {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  background: linear-gradient(to bottom, #add1ed 0%, #D4D4D4 100%);
+}
+.main .nav_bar__elements {
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  background-color: #add1ed;
+  top: 0;
+  left: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  padding-top: 7px;
+  list-style-type: none;
+  text-align: center;
+}
+.main .nav_bar__link {
+  font-weight: bold;
+  color: black;
+  font-size: 22px;
+  text-decoration: none;
+}
+.main .nav_bar__link:hover {
+  color: #DEDEDE;
+}
+.main .right_bar {
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(to bottom, #add1ed 0%, #D4D4D4 100%);
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  background-color: #D4D4D4;
+  width: 100%;
+  text-align: center;
+  border-top: 3px solid black;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    min-height: 100vh;
+  }
+
+  .main {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr/minmax(auto, 120px) 1fr minmax(100px, auto);
+  }
+  .main .nav_bar {
+    grid-column: 1;
+  }
+  .main .nav_bar__elements {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  .main .main__content {
+    grid-column: 2;
+  }
+  .main .right-bar {
+    grid-column: 3;
+  }
+  .main .inline_calendar {
+    margin-top: 150px;
+  }
+  .main .search_form {
+    margin-top: 140px;
+  }
+}
